@@ -76,12 +76,20 @@
 		</dependency>
 		<dependency>
 			<groupId>com.liferay.jakarta.portlet</groupId>
-			<artifactId>com.liferay.jakarta.portlet-api</artifactId>
-		</dependency>
+		    <artifactId>com.liferay.jakarta.portlet-api</artifactId>
+		    <version>4.0.0</version>
+		    <scope>provided</scope>
+	    </dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
 		</dependency>
+        <dependency>
+	        <groupId>jakarta.enterprise</groupId>
+	        <artifactId>jakarta.enterprise.cdi-api</artifactId>
+	        <version>4.1.0</version>
+	        <scope>provided</scope>
+	    </dependency>
 	</dependencies>
 
 	<properties>
@@ -306,8 +314,9 @@
 					<scope>test</scope>
 				</dependency>
 				<dependency>
-					<groupId>jakarta.portlet</groupId>
-					<artifactId>portlet-api</artifactId>
+					<groupId>com.liferay.jakarta.portlet</groupId>
+                    <artifactId>com.liferay.jakarta.portlet-api</artifactId>
+                    <version>4.0.0</version>
 					<scope>test</scope>
 				</dependency>
 				<dependency>

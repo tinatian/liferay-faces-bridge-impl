@@ -235,9 +235,9 @@
 		<liferay.deploy.dir>${liferay.app.server.dir}/webapps</liferay.deploy.dir>
 		<liferay.deploy.version>${liferay.version}</liferay.deploy.version>
 		<liferay.home>${env.PORTALS_HOME}/liferay.com/${liferay.platform}-${liferay.deploy.version}-portlet-${portlet.spec.version}-jsf-${faces.spec.version}-${thick.or.thin}</liferay.home>
-		<liferay.faces.alloy.version>4.1.2-SNAPSHOT</liferay.faces.alloy.version>
-		<liferay.faces.bridge.ext.version>8.0.2-SNAPSHOT</liferay.faces.bridge.ext.version>
-		<liferay.faces.showcase.version>4.0.1-SNAPSHOT</liferay.faces.showcase.version>
+		<liferay.faces.alloy.version>5.0.0-SNAPSHOT</liferay.faces.alloy.version>
+		<liferay.faces.bridge.ext.version>9.0.0-SNAPSHOT</liferay.faces.bridge.ext.version>
+		<liferay.faces.showcase.version>5.0.0-SNAPSHOT</liferay.faces.showcase.version>
 		<liferay.platform>liferay-ce</liferay.platform>
 		<liferay.tomcat.version>8.0.30</liferay.tomcat.version>
 		<liferay.version>7.4.3.ga102</liferay.version>
@@ -846,7 +846,7 @@ com.liferay.faces.bridge.servlet.BridgeServletContainerInitializer
 			</dependency>
 		    <dependency>
 			    <groupId>com.liferay.jakarta.portlet</groupId>
-			    <artifactId>com.liferay.jakarta.portlet-api</artifactId>
+                <artifactId>com.liferay.jakarta.portlet-api</artifactId>
 			    <version>4.0.0</version>
 			    <scope>provided</scope>
 		    </dependency>

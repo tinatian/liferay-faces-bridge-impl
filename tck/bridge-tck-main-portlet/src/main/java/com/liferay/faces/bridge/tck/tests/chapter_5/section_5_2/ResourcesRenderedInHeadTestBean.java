@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import jakarta.inject.Named;
 import jakarta.enterprise.context.RequestScoped;
-import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.UIOutput;
 import jakarta.faces.component.UIViewRoot;
@@ -40,7 +40,7 @@ import jakarta.portlet.filter.PortletResponseWrapper;
  *
  * @author  Kyle Stiemann
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class ResourcesRenderedInHeadTestBean {
 

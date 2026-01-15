@@ -35,11 +35,6 @@ public class ResponseStateManagerTCKImpl extends ResponseStateManager {
 	}
 
 	@Override
-	public Object getComponentStateToRestore(FacesContext facesContext) {
-		return wrappedResponseStateManager.getComponentStateToRestore(facesContext);
-	}
-
-	@Override
 	public String getCryptographicallyStrongTokenFromSession(FacesContext facesContext) {
 		return wrappedResponseStateManager.getCryptographicallyStrongTokenFromSession(facesContext);
 	}
@@ -47,11 +42,6 @@ public class ResponseStateManagerTCKImpl extends ResponseStateManager {
 	@Override
 	public Object getState(FacesContext facesContext, String viewId) {
 		return wrappedResponseStateManager.getState(facesContext, viewId);
-	}
-
-	@Override
-	public Object getTreeStructureToRestore(FacesContext facesContext, String viewId) {
-		return wrappedResponseStateManager.getTreeStructureToRestore(facesContext, viewId);
 	}
 
 	@Override
@@ -80,10 +70,5 @@ public class ResponseStateManagerTCKImpl extends ResponseStateManager {
 		if (!attributes.containsKey("invalidateSessionTest")) {
 			wrappedResponseStateManager.writeState(facesContext, state);
 		}
-	}
-
-	@Override
-	public void writeState(FacesContext facesContext, StateManager.SerializedView state) throws IOException {
-		wrappedResponseStateManager.writeState(facesContext, state);
 	}
 }
