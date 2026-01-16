@@ -20,8 +20,8 @@ import java.util.Collections;
 import java.util.List;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 
 import com.liferay.faces.demos.applicant.html5.facelets.dto.Applicant;
 import com.liferay.faces.demos.applicant.html5.facelets.dto.Attachment;
@@ -33,7 +33,7 @@ import com.liferay.faces.demos.applicant.html5.facelets.dto.Province;
  * @author  Neil Griffin
  */
 @ApplicationScoped
-@ManagedBean(name = "listManager")
+@Named("listManager")
 public class ListManager {
 
 	// Private Data Members

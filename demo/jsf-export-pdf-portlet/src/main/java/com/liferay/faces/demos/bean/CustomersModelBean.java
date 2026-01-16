@@ -17,9 +17,9 @@ package com.liferay.faces.demos.bean;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.faces.view.ViewScoped;
 
 import com.liferay.faces.demos.list.CustomersDataModel;
 import com.liferay.faces.demos.service.CustomerService;
@@ -30,7 +30,7 @@ import com.liferay.faces.demos.service.CustomerService;
  *
  * @author  "Neil Griffin"
  */
-@ManagedBean(name = "customersModelBean")
+@Named("customersModelBean")
 @ViewScoped
 public class CustomersModelBean implements Serializable {
 
@@ -38,7 +38,7 @@ public class CustomersModelBean implements Serializable {
 	private static final long serialVersionUID = 7459638254337818761L;
 
 	// Injections
-	@ManagedProperty(value = "#{customerService}")
+	@Inject
 	private CustomerService customerService;
 
 	// Private Data Members

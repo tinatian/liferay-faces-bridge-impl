@@ -17,14 +17,14 @@ package com.liferay.faces.issue.FACES_1470;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.SessionScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.SessionScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "as7LeakSessionScopeBean")
+@Named("as7LeakSessionScopeBean")
 @SessionScoped
 public class AS7LeakSessionScopeBean implements Serializable {
 

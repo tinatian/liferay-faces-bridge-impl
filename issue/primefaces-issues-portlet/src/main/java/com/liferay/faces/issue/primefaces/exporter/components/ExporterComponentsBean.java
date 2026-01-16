@@ -22,8 +22,8 @@ import java.util.Collections;
 import java.util.List;
 
 import jakarta.faces.FacesException;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 
@@ -34,7 +34,7 @@ import org.primefaces.model.StreamedContent;
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "exporterComponentsBean")
+@Named("exporterComponentsBean")
 @RequestScoped
 public class ExporterComponentsBean {
 

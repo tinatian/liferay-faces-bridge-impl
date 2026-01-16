@@ -18,9 +18,9 @@ package com.liferay.faces.bridge.demos.bean;
 import java.util.List;
 
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.component.UICommand;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ActionEvent;
@@ -35,13 +35,13 @@ import com.liferay.faces.util.logging.LoggerFactory;
  * @author  Neil Griffin
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class BridgeInputFileBackingBean {
 
 	// Logger
 	private static final Logger logger = LoggerFactory.getLogger(BridgeInputFileBackingBean.class);
 
-	@ManagedProperty(value = "#{bridgeInputFileModelBean}")
+	@Inject
 	private com.liferay.faces.bridge.demos.bean.BridgeInputFileModelBean bridgeInputFileModelBean;
 
 	public void deleteUploadedFile(ActionEvent actionEvent) {
@@ -98,7 +98,7 @@ public class BridgeInputFileBackingBean {
 	public void setBridgeInputFileModelBean(
 		com.liferay.faces.bridge.demos.bean.BridgeInputFileModelBean bridgeInputFileModelBean) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.bridgeInputFileModelBean = bridgeInputFileModelBean;
 	}
 }

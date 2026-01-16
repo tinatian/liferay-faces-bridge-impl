@@ -19,8 +19,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.portlet.PortletRequest;
 import jakarta.portlet.faces.Bridge;
 
@@ -28,7 +28,7 @@ import jakarta.portlet.faces.Bridge;
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "FACES_3300Bean")
+@Named("FACES_3300Bean")
 @RequestScoped
 public class FACES_3300Bean {
 

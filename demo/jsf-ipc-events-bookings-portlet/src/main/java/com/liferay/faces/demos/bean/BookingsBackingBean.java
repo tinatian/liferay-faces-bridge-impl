@@ -17,9 +17,9 @@ package com.liferay.faces.demos.bean;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.portlet.ActionResponse;
@@ -34,7 +34,7 @@ import com.liferay.faces.util.logging.LoggerFactory;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "bookingsBackingBean")
+@Named("bookingsBackingBean")
 @RequestScoped
 public class BookingsBackingBean {
 
@@ -42,7 +42,7 @@ public class BookingsBackingBean {
 	private static final Logger logger = LoggerFactory.getLogger(BookingsBackingBean.class);
 
 	// Injections
-	@ManagedProperty(name = "bookingsModelBean", value = "#{bookingsModelBean}")
+	@Inject
 	private BookingsModelBean bookingsModelBean;
 
 	// Private Data Members

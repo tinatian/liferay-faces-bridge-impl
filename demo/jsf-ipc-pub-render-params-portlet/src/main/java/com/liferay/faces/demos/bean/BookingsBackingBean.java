@@ -17,8 +17,8 @@ package com.liferay.faces.demos.bean;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 import com.liferay.faces.util.logging.Logger;
 import com.liferay.faces.util.logging.LoggerFactory;
@@ -27,7 +27,7 @@ import com.liferay.faces.util.logging.LoggerFactory;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "bookingsBackingBean")
+@Named("bookingsBackingBean")
 @RequestScoped
 public class BookingsBackingBean {
 

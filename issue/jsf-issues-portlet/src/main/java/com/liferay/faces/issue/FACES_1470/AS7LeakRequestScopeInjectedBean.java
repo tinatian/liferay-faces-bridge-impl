@@ -15,20 +15,20 @@
  */
 package com.liferay.faces.issue.FACES_1470;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "as7LeakRequestScopeInjectedBean")
+@Named("as7LeakRequestScopeInjectedBean")
 @RequestScoped
 public class AS7LeakRequestScopeInjectedBean {
 
 	// Injections
-	@ManagedProperty(name = "applicationScopeBean", value = "#{applicationScopeBean}")
+	@Inject
 	private ApplicationScopeBean applicationScopeBean;
 
 	// Private Data Members

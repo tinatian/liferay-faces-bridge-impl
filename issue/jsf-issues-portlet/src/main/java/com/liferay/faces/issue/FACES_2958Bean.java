@@ -24,8 +24,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 import jakarta.faces.application.Application;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 
@@ -33,7 +33,7 @@ import jakarta.faces.context.FacesContext;
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "FACES_2958Bean")
+@Named("FACES_2958Bean")
 @RequestScoped
 public class FACES_2958Bean {
 

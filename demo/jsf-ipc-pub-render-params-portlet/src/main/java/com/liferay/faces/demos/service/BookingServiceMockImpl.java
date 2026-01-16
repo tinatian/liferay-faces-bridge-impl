@@ -20,8 +20,8 @@ import java.util.Collections;
 import java.util.List;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 
 import com.liferay.faces.demos.dto.Booking;
 
@@ -29,7 +29,7 @@ import com.liferay.faces.demos.dto.Booking;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "bookingService")
+@Named("bookingService")
 @ApplicationScoped
 public class BookingServiceMockImpl implements BookingService {
 

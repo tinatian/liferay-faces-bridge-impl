@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ActionEvent;
@@ -31,7 +31,7 @@ import jakarta.faces.event.ActionEvent;
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "instanceTrackerBean")
+@Named("instanceTrackerBean")
 @ApplicationScoped
 public class InstanceTrackerBean {
 

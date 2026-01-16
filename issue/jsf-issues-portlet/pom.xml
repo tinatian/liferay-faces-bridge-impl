@@ -89,6 +89,14 @@
 		</plugins>
 	</build>
 	<dependencies>
+        <dependency>
+		    <groupId>jakarta.enterprise</groupId>
+		    <artifactId>jakarta.enterprise.cdi-api</artifactId>
+		</dependency>
+        <dependency>
+			<groupId>jakarta.inject</groupId>
+			<artifactId>jakarta.inject-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.liferay.jakarta.portlet</groupId>
 			<artifactId>com.liferay.jakarta.portlet-api</artifactId>

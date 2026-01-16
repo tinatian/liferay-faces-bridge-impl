@@ -19,8 +19,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.portlet.PortletContext;
@@ -33,7 +33,7 @@ import com.liferay.faces.demos.applicant.alloy.facelets.dto.Attachment;
  * @author  Neil Griffin
  */
 @ApplicationScoped
-@ManagedBean(name = "attachmentManager")
+@Named("attachmentManager")
 public class AttachmentManager {
 
 	public File getAttachmentDir(FacesContext facesContext) {

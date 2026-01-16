@@ -20,10 +20,10 @@ import java.util.ArrayList;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
-import jakarta.faces.bean.SessionScoped;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.view.ViewScoped;
 
 import com.liferay.faces.demos.dto.Booking;
 import com.liferay.faces.demos.dto.Customer;
@@ -47,7 +47,7 @@ import com.liferay.faces.util.logging.LoggerFactory;
  * @author  Neil Griffin
  */
 @SessionScoped
-@ManagedBean(name = "bookingsModelBean")
+@Named("bookingsModelBean")
 public class BookingsModelBean implements Serializable {
 
 	// serialVersionUID

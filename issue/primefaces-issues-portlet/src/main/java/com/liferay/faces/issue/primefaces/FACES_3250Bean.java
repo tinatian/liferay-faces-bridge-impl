@@ -17,8 +17,8 @@ package com.liferay.faces.issue.primefaces;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 import org.primefaces.event.FileUploadEvent;
 
@@ -29,7 +29,7 @@ import org.primefaces.model.file.UploadedFile;
  * @author  Yeray Rodriguez (yerayrodriguez@gmail.com)
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "FACES_3250Bean")
+@Named("FACES_3250Bean")
 @RequestScoped
 public class FACES_3250Bean implements Serializable {
 
