@@ -42,7 +42,7 @@ public class GetBridgeClassNameMethodTestPortlet extends NonRenderResponseCompat
 	private static String TEST_RUN = "testRun";
 	private static String TEST_FAIL = "testFailMsg";
 	private static String TEST_PASS = "testPassMsg";
-	private static String TEST_BRIDGE_SERVICE_CLASSPATH = "META-INF/services/javax.portlet.faces.Bridge";
+	private static String TEST_BRIDGE_SERVICE_CLASSPATH = "META-INF/services/jakarta.portlet.faces.Bridge";
 
 	public String getBridgeClassName() {
 		String bridgeClassName = super.getBridgeClassName();
