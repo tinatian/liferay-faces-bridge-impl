@@ -27,6 +27,7 @@ import jakarta.faces.context.FacesContext;
 import jakarta.faces.context.ResponseStream;
 import jakarta.faces.context.ResponseWriter;
 import jakarta.faces.render.RenderKit;
+import jakarta.faces.lifecycle.Lifecycle;
 
 
 /**
@@ -40,6 +41,10 @@ public class TCK_FacesContextImpl extends FacesContext {
 
 		FacesContext.setCurrentInstance(this);
 	}
+
+    public Lifecycle getLifecycle() {
+        return mWrapped.getLifecycle();
+    }
 
 	public void addMessage(String clientId, FacesMessage message) {
 		mWrapped.addMessage(clientId, message);

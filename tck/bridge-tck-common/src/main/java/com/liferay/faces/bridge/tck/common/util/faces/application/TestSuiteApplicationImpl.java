@@ -33,7 +33,6 @@ import jakarta.faces.application.ViewHandler;
 import jakarta.faces.application.ViewHandlerWrapper;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
-import jakarta.faces.el.ReferenceSyntaxException;
 
 
 /**
@@ -101,22 +100,6 @@ public class TestSuiteApplicationImpl extends Application {
 		return mWrapped.createComponent(componentExpression, facesContext, componentType);
 	}
 
-	/**
-	 * Create an object which has an associating "binding" expression tying the component to a user property.
-	 *
-	 * <p>First the specified value-binding is evaluated; if it returns a non-null value then the component "already
-	 * exists" and so the resulting value is simply returned.
-	 *
-	 * <p>Otherwise a new UIComponent instance is created using the specified componentType, and the new object stored
-	 * via the provided value-binding before being returned.
-	 *
-	 * @deprecated
-	 */
-	public jakarta.faces.component.UIComponent createComponent(jakarta.faces.el.ValueBinding componentBinding,
-		jakarta.faces.context.FacesContext facesContext, String componentType) throws FacesException {
-		return mWrapped.createComponent(componentBinding, facesContext, componentType);
-	}
-
 	public jakarta.faces.convert.Converter createConverter(String converterId) {
 		return mWrapped.createConverter(converterId);
 	}
@@ -125,35 +108,8 @@ public class TestSuiteApplicationImpl extends Application {
 		return mWrapped.createConverter(targetClass);
 	}
 
-	/**
-	 * Create an object which can be used to invoke an arbitrary method via an EL expression at a later time. This is
-	 * similar to createValueBinding except that it can invoke an arbitrary method (with parameters) rather than just
-	 * get/set a javabean property.
-	 *
-	 * <p>This is used to invoke ActionListener method, and ValueChangeListener methods.
-	 *
-	 * @deprecated
-	 */
-	public jakarta.faces.el.MethodBinding createMethodBinding(String ref, Class[] params)
-		throws ReferenceSyntaxException {
-		return mWrapped.createMethodBinding(ref, params);
-	}
-
 	public jakarta.faces.validator.Validator createValidator(String validatorId) throws FacesException {
 		return mWrapped.createValidator(validatorId);
-	}
-
-	/**
-	 * Create an object which can be used to invoke an arbitrary method via an EL expression at a later time. This is
-	 * similar to createValueBinding except that it can invoke an arbitrary method (with parameters) rather than just
-	 * get/set a javabean property.
-	 *
-	 * <p>This is used to invoke ActionListener method, and ValueChangeListener methods.
-	 *
-	 * @deprecated
-	 */
-	public jakarta.faces.el.ValueBinding createValueBinding(String ref) throws ReferenceSyntaxException {
-		return mWrapped.createValueBinding(ref);
 	}
 
 	public Object evaluateExpressionGet(FacesContext facesContext, String expression, Class expectedType)
@@ -209,17 +165,6 @@ public class TestSuiteApplicationImpl extends Application {
 		return mWrapped.getNavigationHandler();
 	}
 
-	/**
-	 * Get the object used by the VariableResolver to read and write named properties on java beans, Arrays, Lists and
-	 * Maps. This object is used by the ValueBinding implementation, and during the process of configuring "managed
-	 * bean" properties.
-	 *
-	 * @deprecated
-	 */
-	public jakarta.faces.el.PropertyResolver getPropertyResolver() {
-		return mWrapped.getPropertyResolver();
-	}
-
 	public ResourceBundle getResourceBundle(FacesContext facesContext, String name) throws FacesException,
 		NullPointerException {
 		return mWrapped.getResourceBundle(facesContext, name);
@@ -235,15 +180,6 @@ public class TestSuiteApplicationImpl extends Application {
 
 	public Iterator<String> getValidatorIds() {
 		return mWrapped.getValidatorIds();
-	}
-
-	/**
-	 * Get the object used to resolve expressions of form "#{...}".
-	 *
-	 * @deprecated
-	 */
-	public jakarta.faces.el.VariableResolver getVariableResolver() {
-		return mWrapped.getVariableResolver();
 	}
 
 	public jakarta.faces.application.ViewHandler getViewHandler() {
@@ -274,26 +210,12 @@ public class TestSuiteApplicationImpl extends Application {
 		mWrapped.setNavigationHandler(handler);
 	}
 
-	/**
-	 * @deprecated
-	 */
-	public void setPropertyResolver(jakarta.faces.el.PropertyResolver resolver) {
-		mWrapped.setPropertyResolver(resolver);
-	}
-
 	public void setStateManager(jakarta.faces.application.StateManager manager) {
 		mWrapped.setStateManager(manager);
 	}
 
 	public void setSupportedLocales(Collection<Locale> locales) {
 		mWrapped.setSupportedLocales(locales);
-	}
-
-	/**
-	 * @deprecated
-	 */
-	public void setVariableResolver(jakarta.faces.el.VariableResolver resolver) {
-		mWrapped.setVariableResolver(resolver);
 	}
 
 	public void setViewHandler(jakarta.faces.application.ViewHandler viewHandler) {
