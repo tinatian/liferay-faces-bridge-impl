@@ -834,7 +834,7 @@ com.liferay.faces.bridge.servlet.BridgeServletContainerInitializer
 			</dependency>
 			<dependency>
 				<groupId>jakarta.inject</groupId>
-				<artifactId>jakarta.inject</artifactId>
+				<artifactId>jakarta.inject-api</artifactId>
 				<version>2.0.1</version>
 				<scope>provided</scope>
 			</dependency>

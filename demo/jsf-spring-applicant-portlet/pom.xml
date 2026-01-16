@@ -58,7 +58,7 @@
 		</dependency>
 		<dependency>
 			<groupId>jakarta.inject</groupId>
-			<artifactId>jakarta.inject</artifactId>
+			<artifactId>jakarta.inject-api</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
