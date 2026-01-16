@@ -18,9 +18,9 @@ package com.liferay.faces.demos.bean;
 import java.util.List;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
 
 import com.liferay.faces.demos.dto.BookingType;
 import com.liferay.faces.demos.service.BookingTypeService;
@@ -30,14 +30,14 @@ import com.liferay.faces.demos.service.BookingTypeService;
  * @author  Neil Griffin
  */
 @ApplicationScoped
-@ManagedBean(name = "listModelBean")
+@Named("listModelBean")
 public class ListModelBean {
 
 	// Private Data Memebers
 	private List<BookingType> bookingTypes;
 
 	// Injections
-	@ManagedProperty(name = "bookingTypeService", value = "#{bookingTypeService}")
+	@Inject
 	private BookingTypeService bookingTypeService;
 
 	public List<BookingType> getBookingTypes() {
@@ -55,7 +55,7 @@ public class ListModelBean {
 
 	public void setBookingTypeService(BookingTypeService bookingTypeService) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.bookingTypeService = bookingTypeService;
 	}
 }

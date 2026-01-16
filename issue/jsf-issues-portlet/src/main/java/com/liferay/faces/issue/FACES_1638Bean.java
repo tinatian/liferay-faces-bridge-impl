@@ -19,14 +19,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "FACES_1638Bean")
+@Named("FACES_1638Bean")
 @ViewScoped
 public class FACES_1638Bean implements Serializable {
 

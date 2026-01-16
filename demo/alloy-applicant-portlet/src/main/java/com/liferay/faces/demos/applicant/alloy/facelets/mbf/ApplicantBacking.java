@@ -20,9 +20,9 @@ import java.io.IOException;
 import java.util.List;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ActionEvent;
 import jakarta.faces.event.ValueChangeEvent;
@@ -42,7 +42,7 @@ import com.liferay.faces.util.model.UploadedFile;
  *
  * @author  "Neil Griffin"
  */
-@ManagedBean(name = "applicantBacking")
+@Named("applicantBacking")
 @RequestScoped
 public class ApplicantBacking {
 
@@ -50,11 +50,11 @@ public class ApplicantBacking {
 	private static final Logger logger = LoggerFactory.getLogger(ApplicantBacking.class);
 
 	// Injections
-	@ManagedProperty(value = "#{applicantView}")
+	@Inject
 	private ApplicantView applicantView;
-	@ManagedProperty(value = "#{attachmentManager}")
+	@Inject
 	private AttachmentManager attachmentManager;
-	@ManagedProperty(value = "#{listManager}")
+	@Inject
 	private ListManager listManager;
 
 	// Private Data Members
@@ -149,25 +149,25 @@ public class ApplicantBacking {
 
 	public void setApplicant(Applicant applicant) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.applicant = applicant;
 	}
 
 	public void setApplicantView(ApplicantView applicantView) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.applicantView = applicantView;
 	}
 
 	public void setAttachmentManager(AttachmentManager attachmentManager) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.attachmentManager = attachmentManager;
 	}
 
 	public void setListManager(ListManager listManager) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.listManager = listManager;
 	}
 

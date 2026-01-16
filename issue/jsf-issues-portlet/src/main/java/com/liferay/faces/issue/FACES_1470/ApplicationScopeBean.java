@@ -17,15 +17,15 @@ package com.liferay.faces.issue.FACES_1470;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 
 
 /**
  * @author  Neil Griffin
  */
 @ApplicationScoped
-@ManagedBean(name = "applicationScopeBean")
+@Named("applicationScopeBean")
 public class ApplicationScopeBean implements Serializable {
 
 	// serialVersionUID

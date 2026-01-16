@@ -17,8 +17,8 @@ package com.liferay.faces.bridge.tck.tests.chapter_6.section_6_1_3_1;
 
 import java.util.Map;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.render.ResponseStateManager;
@@ -33,7 +33,7 @@ import com.liferay.faces.bridge.tck.common.Constants;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "chapter6_1_3_1EncodePartialActionURLTests")
+@Named("chapter6_1_3_1EncodePartialActionURLTests")
 @RequestScoped
 public class EncodePartialActionURLTests {
 

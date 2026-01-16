@@ -17,15 +17,15 @@ package com.liferay.faces.issue.primefaces;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "FACES_2921Bean")
+@Named("FACES_2921Bean")
 @ViewScoped
 public class FACES_2921Bean implements Serializable {
 
@@ -70,7 +70,7 @@ public class FACES_2921Bean implements Serializable {
 		this.text = text;
 	}
 
-	@ManagedBean(name = "renderKitBean")
+	@Named("renderKitBean")
 	@ApplicationScoped
 	public static final class RenderKitBean {
 

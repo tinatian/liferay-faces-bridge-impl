@@ -15,14 +15,14 @@
  */
 package com.liferay.faces.issue.FACES_1470;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "as7LeakRequestScopeBean")
+@Named("as7LeakRequestScopeBean")
 @RequestScoped
 public class AS7LeakRequestScopeBean {
 

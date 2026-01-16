@@ -21,15 +21,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.faces.view.ViewScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "as7LeakViewScopeInjectedBeanInnerClass")
+@Named("as7LeakViewScopeInjectedBeanInnerClass")
 @ViewScoped
 public class AS7LeakViewScopeInjectedBeanInnerClass implements Serializable {
 
@@ -40,7 +40,7 @@ public class AS7LeakViewScopeInjectedBeanInnerClass implements Serializable {
 	private static final long serialVersionUID = 3854382137975349082L;
 
 	// Injections
-	@ManagedProperty(name = "applicationScopeBean", value = "#{applicationScopeBean}")
+	@Inject
 	private ApplicationScopeBean applicationScopeBean;
 
 	// Private Data Members

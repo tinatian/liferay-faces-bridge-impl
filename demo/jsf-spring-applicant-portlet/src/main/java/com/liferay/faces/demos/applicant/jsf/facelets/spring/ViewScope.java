@@ -17,7 +17,7 @@ package com.liferay.faces.demos.applicant.jsf.facelets.spring;
 
 import java.util.Map;
 
-import jakarta.faces.bean.ViewScoped;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 
 import org.springframework.beans.factory.ObjectFactory;

@@ -19,8 +19,8 @@ import java.io.File;
 import java.io.Serializable;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.event.ActionEvent;
 
 
@@ -29,7 +29,7 @@ import jakarta.faces.event.ActionEvent;
  *
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "applicantView")
+@Named("applicantView")
 @ViewScoped
 public class ApplicantView implements Serializable {
 

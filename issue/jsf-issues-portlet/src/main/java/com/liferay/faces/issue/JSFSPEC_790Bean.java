@@ -20,14 +20,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "JSFSPEC_790Bean")
+@Named("JSFSPEC_790Bean")
 @RequestScoped
 public class JSFSPEC_790Bean {
 

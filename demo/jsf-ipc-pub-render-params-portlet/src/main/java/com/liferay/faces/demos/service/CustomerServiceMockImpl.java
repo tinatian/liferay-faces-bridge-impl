@@ -22,9 +22,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
 
 import com.liferay.faces.demos.dto.Customer;
 
@@ -33,7 +33,7 @@ import com.liferay.faces.demos.dto.Customer;
  * @author  Neil Griffin
  */
 @ApplicationScoped
-@ManagedBean(name = "customerService")
+@Named("customerService")
 public class CustomerServiceMockImpl implements CustomerService {
 
 	// Public Constants
@@ -45,7 +45,7 @@ public class CustomerServiceMockImpl implements CustomerService {
 	private ConcurrentMap<Long, Customer> allCustomers;
 
 	// Injections
-	@ManagedProperty(name = "bookingService", value = "#{bookingService}")
+	@Inject
 	private BookingService bookingService;
 
 	@Override
@@ -87,7 +87,7 @@ public class CustomerServiceMockImpl implements CustomerService {
 
 	public void setBookingService(BookingService bookingService) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.bookingService = bookingService;
 	}
 }

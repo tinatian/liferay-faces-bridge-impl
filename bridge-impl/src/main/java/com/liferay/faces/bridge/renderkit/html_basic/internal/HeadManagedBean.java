@@ -20,8 +20,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.el.ELResolver;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 
 
@@ -34,7 +34,7 @@ import jakarta.faces.context.FacesContext;
  *
  * @author  Neil Griffin
  */
-@ManagedBean
+@Named
 @ViewScoped
 public class HeadManagedBean implements Serializable {
 

@@ -17,8 +17,8 @@ package com.liferay.faces.demos.applicant.primefaces.facelets.mbf;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 
 /**
@@ -26,7 +26,7 @@ import jakarta.faces.bean.ViewScoped;
  *
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "applicantView")
+@Named("applicantView")
 @ViewScoped
 public class ApplicantView implements Serializable {
 

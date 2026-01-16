@@ -19,9 +19,9 @@ import java.util.ArrayList;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 
 import com.liferay.faces.demos.dto.Booking;
 import com.liferay.faces.demos.dto.Customer;
@@ -40,14 +40,14 @@ import com.liferay.faces.util.logging.LoggerFactory;
  * @author  Neil Griffin
  */
 @RequestScoped
-@ManagedBean(name = "bookingsModelBean")
+@Named("bookingsModelBean")
 public class BookingsModelBean {
 
 	// Private Constants
 	private static final Logger logger = LoggerFactory.getLogger(BookingsModelBean.class);
 
 	// Injections
-	@ManagedProperty(name = "customerService", value = "#{customerService}")
+	@Inject
 	private CustomerService customerService;
 
 	// Private Bean Properties

@@ -19,8 +19,8 @@ import java.io.Serializable;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.component.UICommand;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
@@ -36,7 +36,7 @@ import com.liferay.faces.util.logging.LoggerFactory;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "customersBackingBean")
+@Named("customersBackingBean")
 @RequestScoped
 public class CustomersBackingBean {
 

@@ -19,7 +19,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.faces.bean.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.portlet.PortletContext;

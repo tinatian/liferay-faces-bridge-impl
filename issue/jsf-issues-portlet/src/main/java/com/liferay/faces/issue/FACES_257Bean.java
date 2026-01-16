@@ -17,8 +17,8 @@ package com.liferay.faces.issue;
 
 import java.lang.reflect.Field;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.portlet.PortletRequest;
@@ -27,7 +27,7 @@ import jakarta.portlet.PortletRequest;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "FACES_257Bean")
+@Named("FACES_257Bean")
 @RequestScoped
 public class FACES_257Bean {
 

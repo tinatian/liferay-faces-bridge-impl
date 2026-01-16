@@ -17,15 +17,15 @@ package com.liferay.faces.issue.FACES_1470;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.faces.view.ViewScoped;
 
 
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "as7LeakViewScopeInjectedBean")
+@Named("as7LeakViewScopeInjectedBean")
 @ViewScoped
 public class AS7LeakViewScopeInjectedBean implements Serializable {
 
@@ -33,7 +33,7 @@ public class AS7LeakViewScopeInjectedBean implements Serializable {
 	private static final long serialVersionUID = 2854382137975349082L;
 
 	// Injections
-	@ManagedProperty(name = "applicationScopeBean", value = "#{applicationScopeBean}")
+	@Inject
 	private ApplicationScopeBean applicationScopeBean;
 
 	// Private Data Members
