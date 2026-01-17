@@ -85,7 +85,6 @@
 
 	<properties>
 		<app.server.type>tomcat</app.server.type>
-		<aries.cdi.options>-cdiannotations:</aries.cdi.options>
 		<bnd.version>5.3.0</bnd.version>
 		<cdi.version>4.1.0</cdi.version>
 		<component.namespace>none</component.namespace>
@@ -544,7 +543,6 @@ com.liferay.faces.bridge.servlet.BridgeServletContainerInitializer
 		<profile>
 			<id>thin</id>
 			<properties>
-				<aries.cdi.options />
 				<osgi.dynamic.import.package>
 					DynamicImport-Package: \
 						${osgi.dynamic.import.package.liferay.faces.bridge}
